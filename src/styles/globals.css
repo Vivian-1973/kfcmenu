@@ -1,0 +1,43 @@
+/* tailwind.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --light-foreground-rgb: 0, 0, 0;
+  --light-background-color: rgb(255, 255, 255);
+  --dark-foreground-rgb: 255, 255, 255;
+  --dark-background-color: rgb(0, 0, 0);
+}
+
+[data-theme='light'] {
+  --navbar-background: white;
+  --navbar-text: black;
+  --button-background: black;
+  --button-text: white;
+  --menu-item-background: white;
+  --menu-item-text: black;
+
+  background-color: var(--light-background-color);
+  color: rgb(var(--light-foreground-rgb));
+}
+
+[data-theme='dark'] {
+  --navbar-background: black;
+  --navbar-text: white;
+  --button-background: white;
+  --button-text: black;
+  --menu-item-background: black;
+  --menu-item-text: white;
+
+  background-color: var(--dark-background-color);
+  color: rgb(var(--dark-foreground-rgb));
+}
+
+/* Add custom styling for mobile responsiveness */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}
